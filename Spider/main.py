@@ -19,7 +19,7 @@ os.environ["webdriver.chrome.driver"] = chromedriver
 
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 #要访问的地址
-base_url = "https://zh.cam4.com/asiart"
+base_url = "https://zh.cam4.com/qsx222"
 proxy.new_har("cam4", options={ 'captureContent': True})
 
 driver.get(base_url)
