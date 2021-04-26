@@ -25,6 +25,7 @@ jobs:
         pip install requests
         pip install lxml
         pip install selenium
+        pip install browsermob-proxy
     - name: run
       run: |
         sudo cp -p ./chrome/chromedriver /usr/bin/
