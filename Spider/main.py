@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import os,time,sys
 
-path=sys.path[0]+r'/browsermob-proxy'
+path=sys.path[0]+r'/browsermob-proxy-2.1.4/bin/browsermob-proxy'
 server = Server(path)
 server.start()
 proxy = server.create_proxy()
