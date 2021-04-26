@@ -18,7 +18,7 @@ chromedriver = "/usr/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 #要访问的地址
-base_url = "https://zh.cam4.com/qsx222"
+base_url = "http://zh.cam4.com/qsx222"
 proxy.new_har("cam4", options={ 'captureContent': True})
 
 driver.get(base_url)
@@ -27,6 +27,7 @@ driver.get(base_url)
 time.sleep(60)
 result = proxy.har
 print(driver.title)
+print(result)
 for entry in result['log']['entries']: 
     _url = entry['request']['url']
     # 根据URL找到数据接口,这里要找的是 http://git.liuyanlin.cn/get_ht_list 这个接口 
