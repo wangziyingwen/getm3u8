@@ -29,6 +29,9 @@ jobs:
     - name: run
       run: |
         sudo cp -p ./chrome/chromedriver /usr/bin/
+        #sudo cp -p ./chrome/browsermob-proxy /usr/bin/
         chmod -R 777 /usr/bin/chromedriver
+        #chmod -R 777 /usr/bin/browsermob-proxy
+        chmod -R 777 ./Spider/browsermob-proxy
         python ./Spider/main.py
         
