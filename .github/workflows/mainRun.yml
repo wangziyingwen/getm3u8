@@ -32,6 +32,6 @@ jobs:
         #sudo cp -p ./chrome/browsermob-proxy /usr/bin/
         chmod -R 777 /usr/bin/chromedriver
         #chmod -R 777 /usr/bin/browsermob-proxy
-        chmod -R 777 ./Spider/browsermob-proxy-2.1.4/bin/browsermob-proxy
+        chmod -R 777 ./Spider
         python ./Spider/main.py
         

@@ -16,7 +16,6 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--proxy-server={0}'.format(proxy.proxy))
 chromedriver = "/usr/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
-
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 #要访问的地址
 base_url = "https://zh.cam4.com/qsx222"
@@ -25,7 +24,7 @@ proxy.new_har("cam4", options={ 'captureContent': True})
 driver.get(base_url)
 
 #此处最好暂停几秒等待页面加载完成，不然会拿不到结果
-time.sleep(5)
+time.sleep(60)
 result = proxy.har
 print(driver.title)
 for entry in result['log']['entries']: 
