@@ -32,7 +32,7 @@ for entry in result['log']['entries']:
     _url = entry['request']['url']
     # 根据URL找到数据接口,这里要找的是 http://git.liuyanlin.cn/get_ht_list 这个接口 
     if "m3u8" in _url: 
-	    print(_url) 
+        print(_url) 
         _response = entry['response'] 
         _content = _response['content'] 
     # 获取接口返回内容 
