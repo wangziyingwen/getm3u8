@@ -33,10 +33,10 @@ for entry in result['log']['entries']:
     # 根据URL找到数据接口,这里要找的是 http://git.liuyanlin.cn/get_ht_list 这个接口 
     if "m3u8" in _url: 
 	    print(_url) 
-        a_response = entry['response'] 
-        b_content = _response['content'] 
+        _response = entry['response'] 
+        _content = _response['content'] 
     # 获取接口返回内容 
-        print(a_response)
+        print(_response)
 
 server.stop()
 driver.quit()
